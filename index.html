@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <section id="waves">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </section>
+
+    <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="content bg-white w-75">
+             <section id="setting">
+                <div class="title text-center py-5 bg-light border-bottom">
+                    <h1>Setting your Quiz</h1>
+                </div>
+                <div class="container">
+                   <!-- for category -->
+                    <div class="input-group py-3 px-2">
+                        <span class="input-group-text bg-info-subtle">Select Catergory</span>
+                        <select class="form-control" id="category">
+                           <option value="9" selected>General Knowledge</option>
+                          </select>
+                      </div>
+                        <!-- for difficulty -->
+                    <div class="form-group pt-2 px-2">
+                        <label for="difficulty">Difficult</label>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio" name="difficulty" id="easy" value="easy" checked>
+                            <label class="form-check-label" for="difficulty">
+                                Easy
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="difficulty" id="meduim" value="medium">
+                            <label class="form-check-label" for="difficulty">
+                                Medium
+                            </label><br>
+                            <input class="form-check-input" type="radio" name="difficulty" id="hard" value="hard">
+                            <label class="form-check-label" for="difficulty">
+                                Hard
+                            </label>
+                        </div>                             
+                    </div>
+                        <!-- for number of question --> 
+                    <div class="form-group py-3 px-2">
+                        <input type="number" name="" id="NumberOfQuestion" placeholder="Number of Question" class="form-control">
+                    </div>  
+                    
+                    <button class="btn btn-primary w-25 mb-5" id="startBtn">Start</button>
+                </div>
+            </section>
+
+            <section id="quiz">
+                <div class="title text-center py-5 bg-light border-bottom">
+                    <h1>Quiz</h1>
+                    <div class="information d-flex justify-content-between align-items-baseline text-white">
+                        <div class="alert">
+                           <span class="alert bg-danger" id="inCorrect">InCorrect</span> 
+                           <span class="alert bg-success" id="correct">Correct</span> 
+                        </div>
+                        <span class="me-4 rounded-3"><span id="currentQuestion"></span> of <span id="totalQuestion"></span>Questions</span>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="questions my-3">
+                        <h5 class="d-inline">Q:</h5>
+                        <h5 class="d-inline"  id="theQuestion"></h5>
+                        <div id="rowAnswer" class="my-4"></div>
+
+                        <button class="btn btn-primary w-25 mb-5" id="submitBtn">Submit</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="finish">
+                <div class="title text-center py-5 bg-light border-bottom">
+                    <h1>Great Job</h1>
+                </div>
+                <div class="container">
+                    <div class="finalScore text-center my-5">
+                        <h3>Your Score</h3>
+                        <h5 id="score" class="my-3"></h5>
+                        <h5 id="scoreMessage"></h5>
+                    </div>
+                    <button class="btn btn-primary w-25 mb-5" id="tryBtn">Try Again</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
